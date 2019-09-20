@@ -21,21 +21,46 @@ lock_dir="/var/lock/.deploy-[%FOLDER%]-$env.lock"
 if mkdir $lock_dir
 then
     cd $project_root
-    #sudo -u www-data:www-data
-    git stash
-    git pull
+
+    case $env in
+        prod)
+            git stash
+            git pull
+            ;;
+        stage)
+            sudo -u www-data -H git stash
+            sudo -u www-data -H git pull
+            ;;
+    esac
 
     #composer selfupdate
     composer install
 
-    sh vendor/dimaninc/di_core/scripts/copy_core_static.sh
+    #sh vendor/dimaninc/di_core/scripts/copy_core_static.sh
 
     cd assets
-    npm ci
-    gulp build
+    #npm ci
+
+    case $env in
+        prod)
+            gulp build
+            ;;
+        stage)
+            sudo -u www-data -H gulp build
+            ;;
+    esac
 
     echo "Rebuilding caches..."
-    php $project_root"/scripts/rebuild_cache.php" env=$env
+
+    case $env in
+        prod)
+            php $project_root"/scripts/rebuild_cache.php" env=$env
+            ;;
+        stage)
+            sudo -u www-data -H php $project_root"/scripts/rebuild_cache.php" env=$env
+            ;;
+    esac
+
     echo "Template and Content caches rebuilt"
 
     rmdir $lock_dir
