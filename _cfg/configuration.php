@@ -14,6 +14,41 @@ $cfg->setTabsAr([
 		],
 	],
 
+    'open_graph_default_pic' => [
+        'title' => 'Open graph default pic',
+        'type' => 'pic',
+        'value' => '',
+        'tab' => 'pics',
+    ],
+
+    'sample_width' => [
+        'title' => ' pic width',
+        'type' => 'int',
+        'value' => 1920,
+        'tab' => 'pics',
+    ],
+
+    'sample_height' => [
+        'title' => ' pic height',
+        'type' => 'int',
+        'value' => 1080,
+        'tab' => 'pics',
+    ],
+
+    'sample_tn_width' => [
+        'title' => ' pic preview width',
+        'type' => 'int',
+        'value' => 400,
+        'tab' => 'pics',
+    ],
+
+    'sample_tn_height' => [
+        'title' => ' pic preview height',
+        'type' => 'int',
+        'value' => 200,
+        'tab' => 'pics',
+    ],
+
 	'admin_per_page[admins]' => [
 		'title' => 'Admins per page (in Admin)',
 		'type' => 'int',
