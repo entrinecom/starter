@@ -14,6 +14,7 @@
 /htdocs/vendor/
 /htdocs/assets/vendor/
 /assets/node_modules
+/db/files/
 /db/dump/*
 !/db/dump/tables
 !/db/dump/initial
