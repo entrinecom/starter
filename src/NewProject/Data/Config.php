@@ -8,13 +8,15 @@
 
 namespace NewProject\Data;
 
+use diCore\Admin\Data\Skin;
+
 class Config extends \diCore\Data\Config
 {
 	const siteTitle = '';
 	const mainDomain = '[%DOMAIN%]';
-	const apiQueryPrefix = '/api/';
 	const mainLanguage = 'ru';
 	const folderForAssets = 'assets/';
+    const adminSkin = Skin::entrine;
 
 	protected static $location = \diLib::LOCATION_VENDOR_BEYOND;
 }

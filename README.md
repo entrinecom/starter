@@ -35,7 +35,7 @@ link: https://github.com/dimaninc/di_core/blob/master/man/init.md
         const initiating = true;
     }  
 
-5. Now type `http://project_name/_admin/` in browser **(mysql user should login `root`, password `11111111`)**
+5. Now type `http://project_name/_admin/` in browser **(config your mysql: login `root`, password `11111111`)**
 6. Then navigate to `http://project_name/_admin/db/` and click on Restore button near the latest DB dump
 7. Add admins `http://project_name/_admin/admins/`
 8. Clear cache in admin console
