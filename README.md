@@ -4,14 +4,15 @@ diCMS project starter
 ## Usage:
 `git clone https://github.com/testpilotco/starter.git Folder && sh Folder/scripts/init.sh`
 
-## Warning Favicon and fonts
-1. Create and convert here - https://realfavicongenerator.net
-2. Convert font on all formats here - https://onlinefontconverter.com/
-   format needed - (`ttf, woff, woff2, svg, eot, font-face`)
+## Favicon and fonts
+1. Create and convert favicon: https://realfavicongenerator.net
+2. Convert font to all formats: https://onlinefontconverter.com
+
+   formats needed - (`ttf, woff, woff2, svg, eot, font-face`)
    
 ## Fonts and Images folder:
- - `htdocs/assets/fonts/dist` 
- - `htdocs/assets/images/dist`
+ - `htdocs/assets/fonts` 
+ - `htdocs/assets/images`
 
 ## Localhost Start Project
 link: https://github.com/dimaninc/di_core/blob/master/man/init.md
@@ -34,7 +35,7 @@ link: https://github.com/dimaninc/di_core/blob/master/man/init.md
         const initiating = true;
     }  
 
-5. Now type `http://project_name/_admin/` in browser **(mysql user should have login root and empty password)**
+5. Now type `http://project_name/_admin/` in browser **(mysql user should login `root`, password `11111111`)**
 6. Then navigate to `http://project_name/_admin/db/` and click on Restore button near the latest DB dump
 7. Add admins `http://project_name/_admin/admins/`
 8. Clear cache in admin console
