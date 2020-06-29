@@ -19,7 +19,7 @@ gulp.task('node-scripts', () => {
         .src(
             [
                 config.npmDir + '/jquery/dist/jquery.min.js',
-                config.npmDir + '/swiper/js/swiper.min.js',
+                //config.npmDir + '/swiper/js/swiper.min.js',
             ],
             {since: gulp.lastRun('node-scripts')}
         )
@@ -32,8 +32,9 @@ gulp.task('node-scripts', () => {
 
 gulp.task('es6', () => {
     return gulp
-        .src(config.assetsDir + '/src/js/*.js')
+        .src(config.assetsDir + '/src/js/**/*.js')
         .pipe(plugins.babel())
+        .pipe(plugins.concat('application.js'))
         .pipe(gulp.dest(config.prodDir + '/js'))
         .pipe(plugins.uglify())
         .pipe(plugins.rename({suffix: '.min'}))
