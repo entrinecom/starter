@@ -125,7 +125,7 @@ sh vendor/dimaninc/di_core/scripts/copy_core_static.sh
 # npm install
 echo "Installing NPM dependencies..."
 cd assets
-npm install
+npm install --save-dev @babel/core @babel/preset-env cssnano gulp gulp-babel gulp-concat gulp-if gulp-load-plugins gulp-postcss gulp-rename gulp-replace gulp-sass gulp-stylelint gulp-stylus gulp-uglify gulp-util jquery nib postcss-cssnext precss stylelint stylelint-config-recommended-scss stylelint-scss
 
 # gulp build
 gulp build
