@@ -1,5 +1,5 @@
 {
-    "name": "[%DOMAIN%]",
+    "name": "entrine/[%DOMAIN%]",
     "type": "project",
     "require": {
         "dimaninc/di_core": "dev-master",
