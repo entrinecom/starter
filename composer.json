@@ -1,15 +1,19 @@
 {
-    "name": "entrine/[%DOMAIN%]",
-    "type": "project",
-    "require": {
-        "dimaninc/di_core": "dev-master",
-        "phpmailer/phpmailer": "^6.0"
-    },
-    "authors": [
-        {
-            "name": "dimaninc",
-            "email": "dimaninc@gmail.com"
-        }
-    ],
-    "minimum-stability": "stable"
+  "name": "entrine/[%DOMAIN%]",
+  "type": "project",
+  "require": {
+    "dimaninc/di_core": "dev-master",
+    "phpmailer/phpmailer": "^6.0"
+  },
+  "authors": [
+    {
+      "name": "dimaninc",
+      "email": "dimaninc@gmail.com"
+    }
+  ],
+  "config": {
+    "preferred-install": "source",
+    "sort-packages": true
+  },
+  "minimum-stability": "stable"
 }
